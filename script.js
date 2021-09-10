@@ -23,6 +23,8 @@ function game()
     {
         const playerSelection=prompt("Enter your Choice");
         const computerSelection=computerPlay();
+        console.log("YOUR CHOICE : " + playerSelection);
+        console.log("COMPUTER's CHOICE : " + computerSelection);
         result = playRound(playerSelection.toLowerCase(),computerSelection);
         if(result == 1)
         {
@@ -47,11 +49,11 @@ function game()
 function check(win,lose)
 {
     if(win>lose)
-    console.log("YOU'VE WON THE GAME");
+    console.log("RESULT = YOU'VE WON THE GAME  " + "YOUR WIN:" + win + "  COMPUTER'S WIN:" + lose);
     else if (lose>win)
-    console.log("COMPUTER WON THE GAME ");
+    console.log("RESULT = COMPUTER WON THE GAME  " + "COMPUTER'S WIN:" + lose + "  YOUR WIN:" + win );
     else
-    console.log("IT'S A TIE BETWEEN YOU AND COMPUTER");
+    console.log("RESULT = IT'S A TIE BETWEEN YOU AND COMPUTER  " + "YOUR WIN:" + win + "  COMPUTER'S WIN:" + lose);
 }
 //FUNCTION CALL TO START THE GAME
 game();
